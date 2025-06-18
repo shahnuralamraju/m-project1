@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: nextjs-static-site
-    env: static
-    buildCommand: npm install && npm run build && npm run export
-    staticPublishPath: out
+    name: nextjs-ssr-app
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    plan: free
+    branch: main
+    autoDeploy: true
     pullRequestPreviewsEnabled: true
