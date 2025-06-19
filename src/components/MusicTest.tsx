@@ -24,16 +24,16 @@ export default function MusicTest({ isPlaying, toggleMusic }: MusicTestProps) {
             />
 
 
-            <div className="fixed bottom-16 right-16 z-50">
+            <div className="fixed bottom-6 right-6 z-50">
                 <div className="relative w-16 h-16">
                     {/* 🌊 Spotify Pulse Waves */}
-                    {/* {isPlaying && ( */}
+                    {isPlaying && (
                         <div className="pulse-container">
                             <div className="pulse-ring"></div>
                             <div className="pulse-ring"></div>
                             <div className="pulse-ring"></div>
                         </div>
-                    {/* )} */}
+                    )}
 
                     {/* 🔘 Actual Button */}
                     <button
