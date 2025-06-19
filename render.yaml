@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: nextjs-static-site
-    env: static
-    buildCommand: npm install && npm run build && npm run export
-    staticPublishPath: out
-    pullRequestPreviewsEnabled: true
