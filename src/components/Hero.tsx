@@ -16,31 +16,30 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 bg-[url('/hero-bg.svg')] bg-cover bg-center">
+        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[url('/hero-bg.svg')] bg-cover bg-center">
             {/* 💖 Top headline */}
-            <div>
-                <motion.h2
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="absolute top-6 text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-pink-400 via-red-500 to-amber-400 bg-clip-text drop-shadow-md"
-                >
-                    Every Love Story Is Beautiful, But Ours Is My Favorite 💖
-                </motion.h2>
-            </div>
+            <motion.h2
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-28 text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 via-red-500 to-amber-400 bg-clip-text drop-shadow-md"
+            >
+                Every Love Story Is Beautiful, But Ours Is My Favorite 💖
+            </motion.h2>
 
             {/* 💌 Love card */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="relative max-w-2xl w-full bg-white/70 backdrop-blur-md pt-24 px-8 pb-10 rounded-3xl shadow-2xl mt-20"
+                className="relative max-w-2xl w-full bg-white/70 backdrop-blur-md pt-24 px-8 pb-10 rounded-3xl shadow-2xl"
             >
                 {/* 👤 Profile Image - 50% inside the card */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
                     <div className="w-32 h-32 rounded-full border-4 border-pink-400 shadow-xl overflow-hidden bg-white">
                         <Image
-                            src="/avatar.avif"
+                            src="/cp3.png"
+                            // src="/avatar.avif"
                             alt="Forever My Love"
                             width={200}
                             height={200}
