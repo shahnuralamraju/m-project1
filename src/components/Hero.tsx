@@ -29,7 +29,7 @@ export default function Hero({ setIsPlaying }: HeroProps) {
     }
 
     return (
-        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[url('/hero-bg.svg')] bg-cover bg-center">
+        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-cover bg-center">
             {/* 💖 Top headline */}
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}

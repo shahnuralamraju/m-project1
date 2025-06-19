@@ -9,6 +9,7 @@ import FloatingHearts from './FloatingHearts';
 import OurMoment from './OurMoment';
 import Hero from './Hero';
 import { useState } from 'react';
+import MobileMenu from './MobileMenu';
 
 
 export default function LovePage() {
@@ -21,6 +22,7 @@ export default function LovePage() {
 
     return (
         <main className="relative bg-gradient-to-br from-rose-100 via-amber-50 to-white text-rose-900 min-h-screen font-sans overflow-hidden">
+            <MobileMenu />
             {/* BackgroundMusic   */}
             <MusicTest isPlaying={isPlaying} toggleMusic={toggleMusic} />
 
@@ -32,11 +34,12 @@ export default function LovePage() {
 
             {/* Hero Section */}
 
+            <section id="hero">
+                <Hero setIsPlaying={setIsPlaying} />
+            </section>
 
-            <Hero setIsPlaying={setIsPlaying} />
-
-            {/* Timeline Section */}
-            <section className="bg-white py-20 px-6 text-center relative z-10">
+            {/* journey Section */}
+            <section id='journey' className="bg-white py-20 px-6 text-center relative z-10">
                 <h2 className="text-4xl font-bold mb-10">Our Journey</h2>
                 <div className="max-w-4xl mx-auto text-left space-y-10">
                     {[
@@ -61,13 +64,13 @@ export default function LovePage() {
             </section>
 
             {/* Our Moment Section */}
-            <section className="bg-pink-100 py-20 px-6">
+            <section id='moment' className="bg-pink-100 py-20 px-6">
                 <h2 className="text-4xl font-bold text-center mb-10">Moments Together</h2>
                 <OurMoment />
             </section>
 
             {/* Poem Section */}
-            <section className="bg-white py-20 px-6 text-center">
+            <section id="poem" className="bg-white py-20 px-6 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +92,7 @@ export default function LovePage() {
             </section>
 
             {/* Extra Quote Section */}
-            <section className="bg-rose-50 py-20 px-6">
+            <section id='quote' className="bg-rose-50 py-20 px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
