@@ -49,8 +49,8 @@ export default function OurMoment() {
                             priority
                         />
                         {/* Message Overlay */}
-                        <div className="absolute bg-pink-100 p-2 bottom-20 w-full px-6 text-center z-10">
-                            <p className="text-lg sm:text-xl md:text-2xl font-semibold  drop-shadow-md tracking-wide animate-fade-in bg-gradient-to-r from-pink-500 via-yellow-600 to-pink-700 bg-clip-text text-transparent">
+                        <div className="absolute bg-pink-200 p-2 bottom-20 w-full px-6 text-center z-10">
+                            <p className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-amber-400 bg-clip-text drop-shadow-md">
                                 {data.message}
                             </p>
                         </div>

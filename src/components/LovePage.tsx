@@ -4,20 +4,25 @@
 import { motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import MusicTest from './MusicTest';
+import MusicTest from './MusicTest';
 import FloatingHearts from './FloatingHearts';
 import OurMoment from './OurMoment';
 import Hero from './Hero';
+import { useState } from 'react';
 
 
 export default function LovePage() {
-    // const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const toggleMusic = () => {
+        setIsPlaying((prev) => !prev);
+    };
 
 
     return (
         <main className="relative bg-gradient-to-br from-rose-100 via-amber-50 to-white text-rose-900 min-h-screen font-sans overflow-hidden">
             {/* BackgroundMusic   */}
-            {/* <MusicTest /> */}
+            <MusicTest isPlaying={isPlaying} toggleMusic={toggleMusic} />
 
 
             {/* Floating Hearts Background */}
@@ -28,7 +33,7 @@ export default function LovePage() {
             {/* Hero Section */}
 
 
-            <Hero />
+            <Hero setIsPlaying={setIsPlaying} />
 
             {/* Timeline Section */}
             <section className="bg-white py-20 px-6 text-center relative z-10">

@@ -7,13 +7,26 @@ import confetti from 'canvas-confetti';
 import Image from 'next/image';
 import Modal from './Modal';
 
-export default function Hero() {
+
+type HeroProps = {
+    isPlaying?: boolean;
+    setIsPlaying?: (isPlaying: boolean) => void;
+}
+
+export default function Hero({ setIsPlaying }: HeroProps) {
     const [showLetter, setShowLetter] = useState(false);
 
     const openLetter = () => {
         setShowLetter(true);
         confetti({ particleCount: 250, spread: 70, origin: { y: 0.6 } });
     };
+
+    const handleButton = () => {
+        if (setIsPlaying) {
+            setIsPlaying(true);
+        }
+        openLetter();
+    }
 
     return (
         <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[url('/hero-bg.svg')] bg-cover bg-center">
@@ -36,14 +49,17 @@ export default function Hero() {
             >
                 {/* 👤 Profile Image - 50% inside the card */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                    <div className="w-32 h-32 rounded-full border-4 border-pink-400 shadow-xl overflow-hidden bg-white">
+                    <div className="relative w-36 h-36 rounded-full overflow-hidden bg-white shadow-xl group">
+                        {/* ✨ Glowing Border Animation */}
+                        <div className="absolute inset-0 rounded-full animate-glow-ring bg-gradient-to-r from-pink-400 via-red-400 to-amber-300 opacity-70 blur-xl z-[-1]" />
+
                         <Image
                             src="/cp3.png"
                             // src="/avatar.avif"
                             alt="Forever My Love"
-                            width={200}
-                            height={200}
-                            className="object-cover w-full h-full"
+                            width={144}
+                            height={144}
+                            className="object-cover w-full h-full rounded-full border-4 border-white group-hover:scale-105 transition duration-500"
                         />
                     </div>
                 </div>
@@ -67,7 +83,7 @@ export default function Hero() {
                     />
                 </p>
                 <motion.button
-                    onClick={openLetter}
+                    onClick={handleButton}
                     className="mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-amber-400 text-white font-semibold rounded-full hover:scale-105 transition-all shadow-lg cursor-pointer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
