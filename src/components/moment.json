@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "image": "couple1.jpg",
+        "message": "Every moment with you feels like a beautiful dream come true."
+    },
+    {
+        "id": 2,
+        "image": "couple2.jpg",
+        "message": "Together is my favorite place to be, forever and always."
+    },
+    {
+        "id": 3,
+        "image": "couple3.jpg",
+        "message": "Your smile is the sunshine that lights up my soul."
+    },
+    {
+        "id": 4,
+        "image": "couple4.jpg",
+        "message": "Hand in hand, heart to heart, we’ll always find our way."
+    },
+    {
+        "id": 5,
+        "image": "couple5.jpg",
+        "message": "With you, every ordinary day becomes magical."
+    },
+    {
+        "id": 6,
+        "image": "couple6.jpg",
+        "message": "Loving you is the easiest thing I’ve ever done."
+    },
+    {
+        "id": 7,
+        "image": "couple7.jpg",
+        "message": "No matter where life takes us, I’ll always choose you."
+    }
+]
