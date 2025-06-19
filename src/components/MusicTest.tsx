@@ -38,7 +38,7 @@ export default function MusicTest({ isPlaying, toggleMusic }: MusicTestProps) {
                     {/* 🔘 Actual Button */}
                     <button
                         onClick={toggleMusic}
-                        className="absolute inset-0 flex items-center justify-center w-16 h-16 bg-pink-600 text-white rounded-full shadow-lg hover:bg-pink-700 transition z-10"
+                        className={`absolute inset-0 flex items-center justify-center w-16 h-16 bg-pink-600 text-white rounded-full shadow-lg hover:bg-pink-700 transition z-10`}
                         aria-label={isPlaying ? 'Pause Music' : 'Play Music'}
                         type="button"
                     >
